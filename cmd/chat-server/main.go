@@ -2,14 +2,15 @@ package main
 
 import (
 	"context"
+	"log"
+	"net"
+	"strconv"
+
 	desc "github.com/bba1t/chat-server/pkg/chat_v1"
 	"github.com/brianvoe/gofakeit"
 	"github.com/golang/protobuf/ptypes/empty"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/reflection"
-	"log"
-	"net"
-	"strconv"
 )
 
 const (
