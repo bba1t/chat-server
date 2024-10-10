@@ -11,7 +11,14 @@ install-deps:
 	GOBIN=$(LOCAL_BIN) go install -mod=mod google.golang.org/grpc/cmd/protoc-gen-go-grpc@v1.2
 
 get-deps:
-
+	go get google.golang.org/protobuf/reflect/protoreflect
+	go get google.golang.org/protobuf/runtime/protoimpl
+	go get github.com/golang/protobuf/ptypes/empty
+	go get github.com/golang/protobuf/ptypes/timestamp
+	go get google.golang.org/grpc
+	go get google.golang.org/grpc/codes
+	go get google.golang.org/grpc/status
+	go get github.com/brianvoe/gofakeit
 
 generate:
 	make generate-chat-api
